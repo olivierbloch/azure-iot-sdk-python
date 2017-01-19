@@ -28,17 +28,17 @@ except Exception as e:
     sys.exit(e)
 
 setup(
-    name='iothub_client',
+    name='azure_iothub_device_client',
     version=_version+'.0', # using version of actual c client release
-    description='IoT Hub Client Library',
+    description='IoT Hub Device Client Library',
     license='Apache Software License',
-    url='https://github.com/Azure/azure-iot-sdks/tree/master/python/device',
+    url='https://github.com/Azure/azure-iot-sdk-python/tree/master/python/device',
     author='aziotclb',
     author_email='aziotclb@microsoft.com',
-    long_description='IoT Hub Client Library for Python 2.7 and 3.4 - iothub_client.pyd',
+    long_description='IoT Hub Device Client Library for Python 2.7 and 3.6 - iothub_client.so',
     packages=['iothub_client'],
     classifiers=[
-        'Environment :: Win32 (MS Windows)',
+        'Environment :: Linux',
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
@@ -47,9 +47,10 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5'],
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6'],
     package_data={
-        'iothub_client': ['__init__.py','iothub_client.pyd'],
+        'iothub_client': ['__init__.py','iothub_client.so'],
     },
     distclass=BinaryDistribution
 ) 
